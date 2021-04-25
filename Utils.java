@@ -20,27 +20,20 @@ public class Utils {
 
    public static boolean Valid(String email) {
       Pattern p = Pattern.compile(new Utils().email);
-      Matcher m = p.matcher(email);
-      if (m.find())
-         return true;
-      else
-         return false;
+      Matcher m = p.matcher(email);      
+         return m.find();
    }
 
    public static boolean valid(String phone) {
       Pattern p = Pattern.compile(new Utils().phone);
       Matcher m = p.matcher(phone);
-      if (m.find())
-         return true;
-      else
-         return false;
+      return m.find();
    }
 
-   public static String convert2string(byte[] bytes) throws Exception {
+   public static String convert2string(byte[] bytes) {
       ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
       BufferedReader br = new BufferedReader(new InputStreamReader(bais));
-      String s = br.readLine();
-      return s;
+      return br.readLine();
    }
 
    public static String convert2string(int money) {
@@ -63,7 +56,7 @@ public class Utils {
    // and then make one more function call to close the tag I just opened.
    public static String tag;
 
-   public static void beginHTML(String tag, PrintStream out) throws Exception {
+   public static void beginHTML(String tag, PrintStream out){
       out.println("<" + tag + ">");
       Utils.tag = tag;
    }
@@ -110,27 +103,23 @@ public class Utils {
    }
 
    public static int prompt_int(String prompt) {
-      System.out.print(prompt);
+      System.out.println(prompt);
       return new java.util.Scanner(System.in).nextInt();
    }
 
    public static float prompt_float(String prompt) {
-      System.out.print(prompt);
+      System.out.println(prompt);
       return new java.util.Scanner(System.in).nextFloat();
    }
 
    public static double prompt_double(String prompt) {
-      System.out.print(prompt);
+      System.out.println(prompt);
       return new java.util.Scanner(System.in).nextDouble();
    }
 
-   public static String prompt_string(String prompt) {
-      try {
-         System.out.print(prompt);
-         return new BufferedReader(new InputStreamReader(System.in)).readLine();
-      } catch (Exception e) {
-         return "";
-      }
+   public static String prompt_string(String prompt) {      
+         System.out.println(prompt);
+         return new BufferedReader(new InputStreamReader(System.in)).readLine();       
    }
 
    public static String concatenate(String... strings) {
