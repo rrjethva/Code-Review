@@ -103,22 +103,22 @@ public class Utils {
    }
 
    public static int prompt_int(String prompt) {
-      System.out.println(prompt);
+      System.out.append(prompt);
       return new java.util.Scanner(System.in).nextInt();
    }
 
    public static float prompt_float(String prompt) {
-      System.out.println(prompt);
+      System.out.append(prompt);
       return new java.util.Scanner(System.in).nextFloat();
    }
 
    public static double prompt_double(String prompt) {
-      System.out.println(prompt);
+      System.out.append(prompt);
       return new java.util.Scanner(System.in).nextDouble();
    }
 
    public static String prompt_string(String prompt) {      
-         System.out.println(prompt);
+         System.out.append(prompt);
          return new BufferedReader(new InputStreamReader(System.in)).readLine();       
    }
 
