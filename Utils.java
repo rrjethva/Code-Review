@@ -11,10 +11,6 @@ import java.util.*;
 
 public class Utils {
 
-   public static void main(String[] args) {
-
-   }
-
    public String email = "^(\\d|\\w|\\.|\\-)*@(\\d|\\w|\\.|\\-)*\\.com$";
    public String phone = "[0-9]{3}\\-[0-9]{3}\\-[0-9]{4}";
 
